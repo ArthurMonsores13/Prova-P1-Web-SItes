@@ -1,0 +1,226 @@
+/* Estilos gerais */
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+    margin: 0;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos para o conteúdo */
+.content {
+    padding: 20px;
+    background-color: white;
+    color: black;
+}
+
+p {
+    font-size: 1rem; /* Tamanho da fonte ajustado para legibilidade */
+    line-height: 1.6; /* Espaçamento entre linhas melhorado */
+    color: black;
+    padding: 10px 20px; /* Ajuste para melhor espaçamento */
+    margin: 0; /* Remove margens padrão para maior controle */
+}
+
+/* Estilos para o header e navegação */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+
+header .title h1 {
+    color: white;
+    font-size: 2.5rem; /* Tamanho da fonte ajustado para visibilidade */
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #FFD700; /* Cor de destaque ao passar o mouse */
+}
+
+
+/* Estilos para títulos */
+.title h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Tamanho do título principal ajustado */
+}
+
+.title h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+    font-size: 2rem; /* Tamanho dos subtítulos ajustado */
+}
+
+.title h3 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+    font-size: 1.75rem; /* Tamanho dos subtítulos ajustado */
+}
+
+.title h4,
+.title h5,
+.title h6 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+.title h4 {
+    font-size: 1.5rem; /* Tamanho dos subtítulos ajustado */
+}
+
+.title h5 {
+    font-size: 1.25rem; /* Tamanho dos subtítulos ajustado */
+}
+
+.title h6 {
+    font-size: 1.1rem; /* Tamanho dos subtítulos ajustado */
+}
+
+/* Estilos para listas */
+ul {
+    padding-left: 40px;
+    font-size: 1rem; /* Tamanho da fonte das listas ajustado */
+}
+
+/* Estilos para o footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color:; /* Fundo semi-transparente para melhor legibilidade */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem; /* Tamanho da fonte ajustado para o footer */
+
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .title h1,
+    .title h2,
+    .title h3,
+    .title h4,
+    .title h5,
+    .title h6 {
+        font-size: 1.5rem; /* Ajuste para melhor legibilidade em telas menores */
+    }
+
+    p {
+        padding: 10px 15px;
+        font-size: 0.9rem; /* Reduz o tamanho da fonte em telas menores */
+    }
+}
+
+/* Estilos para tópicos com bordas */
+.topic-shadow {
+    border: 2px solid red;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: orange;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ajustada */
+}
+
+.topic-shadow img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.topic-shadow h6 {
+    margin-top: 0;
+    font-size: 1.1rem; /* Ajuste para tamanhos de fonte dos tópicos */
+}
+
+.topic-shadow p {
+    margin: 0;
+    font-size: 1rem; /* Ajuste para tamanhos de fonte dos parágrafos dentro do tópico */
+}
+#grafico1{
+    width:300px;
+    height: auto;
+}
+#grafico2{
+    width: 650px;
+    height: auto;
+}
+/* Estilo do cabeçalho e rodapé com borda de neon */
+.neon-border {
+    position: relative;
+    padding: 20px;
+    border: 3px solid #ff4500; /* Cor da borda de neon */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.7), 0 0 20px rgba(255, 69, 0, 0.5);
+    background-color: #000; /* Cor de fundo para destacar o neon */
+    color: #fff;
+    text-align: center;
+  }
+  
+  .neon-border::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 10px;
+    border: 3px solid #ff4500; /* Cor da borda de neon */
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.9), 0 0 30px rgba(255, 69, 0, 0.5);
+    z-index: -1;
+    opacity: 0.8;
+  }
+.img-zoom{
+transition: transform 0.3s ease;
+
+}
+.img-zoom:hover {
+    transform: scale(1.2);
+}
+#foto{
+    width: 650px;
+    height: auto;
+}
