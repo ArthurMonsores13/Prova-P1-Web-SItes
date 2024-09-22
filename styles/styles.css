@@ -159,3 +159,13 @@ footer li {
     width: 500px;
     height: auto;
 }
+.example {
+    display: -webkit-box; 
+    display: box;
+    display: flex; 
+}
+@media screen and (max-width: 768px) {
+    .example {
+        font-size: 1.2rem; 
+    }
+}
