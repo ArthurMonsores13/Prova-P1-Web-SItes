@@ -1,226 +1,161 @@
-/* Estilos gerais */
-body {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+
+* {
     margin: 0;
-    background-color: white;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Estilos para o conteúdo */
-.content {
-    padding: 20px;
-    background-color: white;
-    color: black;
-}
-
-p {
-    font-size: 1rem; /* Tamanho da fonte ajustado para legibilidade */
-    line-height: 1.6; /* Espaçamento entre linhas melhorado */
-    color: black;
-    padding: 10px 20px; /* Ajuste para melhor espaçamento */
-    margin: 0; /* Remove margens padrão para maior controle */
-}
-
-/* Estilos para o header e navegação */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: rgba(0, 0, 0, 0.7); 
-}
-
-header .title h1 {
-    color: white;
-    font-size: 2.5rem; /* Tamanho da fonte ajustado para visibilidade */
-}
-
-header nav ul {
-    display: flex;
-    list-style-type: none;
     padding: 0;
-    margin: 0;
+    box-sizing: border-box;
 }
 
-header nav ul li {
-    margin-left: 20px;
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: burlywood;
+    color: #333;
+    line-height: 1.6;
 }
 
-header nav ul li a {
-    color: white;
+
+header.neon-border {
+    background-color: #232323;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #ff4500;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ff4500;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-header nav ul li a:hover {
-    color: #FFD700; /* Cor de destaque ao passar o mouse */
+nav ul li a:hover {
+    color: #fff;
 }
 
-
-/* Estilos para títulos */
-.title h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 2.5rem; /* Tamanho do título principal ajustado */
-}
-
-.title h2 {
-    text-align: center;
-    color: #333;
-    margin-top: 20px;
-    font-size: 2rem; /* Tamanho dos subtítulos ajustado */
-}
-
-.title h3 {
-    text-align: center;
-    color: #333;
-    margin-top: 20px;
-    font-size: 1.75rem; /* Tamanho dos subtítulos ajustado */
-}
-
-.title h4,
-.title h5,
-.title h6 {
-    text-align: center;
-    color: #333;
-    margin-top: 20px;
-}
-
-.title h4 {
-    font-size: 1.5rem; /* Tamanho dos subtítulos ajustado */
-}
-
-.title h5 {
-    font-size: 1.25rem; /* Tamanho dos subtítulos ajustado */
-}
-
-.title h6 {
-    font-size: 1.1rem; /* Tamanho dos subtítulos ajustado */
-}
-
-/* Estilos para listas */
-ul {
-    padding-left: 40px;
-    font-size: 1rem; /* Tamanho da fonte das listas ajustado */
-}
-
-/* Estilos para o footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color:; /* Fundo semi-transparente para melhor legibilidade */
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    font-size: 1rem; /* Tamanho da fonte ajustado para o footer */
-
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    header nav ul li {
-        margin-left: 0;
-        margin-top: 10px;
-    }
-
-    .title h1,
-    .title h2,
-    .title h3,
-    .title h4,
-    .title h5,
-    .title h6 {
-        font-size: 1.5rem; /* Ajuste para melhor legibilidade em telas menores */
-    }
-
-    p {
-        padding: 10px 15px;
-        font-size: 0.9rem; /* Reduz o tamanho da fonte em telas menores */
-    }
-}
-
-/* Estilos para tópicos com bordas */
 .topic-shadow {
-    border: 2px solid red;
-    border-radius: 8px;
+    background-color: #fff;
+    margin: 40px auto;
     padding: 20px;
-    margin-bottom: 20px;
-    background-color: orange;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ajustada */
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.topic-shadow img {
-    max-width: 100%;
+.topic-shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.topic-content {
+    padding: 10px;
+}
+
+.topic-content img {
+    width: 100%;
     height: auto;
-    border-radius: 4px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.topic-content h2, .topic-content h3, .topic-content h4, .topic-content h5, .topic-content h6 {
+    color: #ff4500;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+ul li {
     margin-bottom: 10px;
 }
 
-.topic-shadow h6 {
-    margin-top: 0;
-    font-size: 1.1rem; /* Ajuste para tamanhos de fonte dos tópicos */
+a {
+    color: #ff4500;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.topic-shadow p {
-    margin: 0;
-    font-size: 1rem; /* Ajuste para tamanhos de fonte dos parágrafos dentro do tópico */
+a:hover {
+    color: #333;
 }
-#grafico1{
-    width:300px;
-    height: auto;
-}
-#grafico2{
-    width: 650px;
-    height: auto;
-}
-/* Estilo do cabeçalho e rodapé com borda de neon */
-.neon-border {
-    position: relative;
-    padding: 20px;
-    border: 3px solid #ff4500; /* Cor da borda de neon */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 69, 0, 0.7), 0 0 20px rgba(255, 69, 0, 0.5);
-    background-color: #000; /* Cor de fundo para destacar o neon */
-    color: #fff;
-    text-align: center;
-  }
-  
-  .neon-border::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    border-radius: 10px;
-    border: 3px solid #ff4500; /* Cor da borda de neon */
-    box-shadow: 0 0 15px rgba(255, 69, 0, 0.9), 0 0 30px rgba(255, 69, 0, 0.5);
-    z-index: -1;
-    opacity: 0.8;
-  }
-.img-zoom{
-transition: transform 0.3s ease;
 
+.divisoria {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #ff4500, #fff);
+    margin: 40px auto;
+    width: 90%;
 }
+
+.img-zoom {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
 .img-zoom:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
-#foto{
+
+
+footer.neon-border {
+    background-color: #232323;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    border-top: 5px solid #ff4500;
+}
+
+footer li {
+    list-style: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .topic-shadow {
+        padding: 10px;
+        margin: 20px auto;
+    }
+}
+
+#grafico1 {
+    width: 300px;
+    height: auto;
+}
+
+#grafico2 {
     width: 650px;
     height: auto;
 }
